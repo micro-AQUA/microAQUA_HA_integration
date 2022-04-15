@@ -1,0 +1,24 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+#---------------------------------------#
+#       microAQUA integration           #
+#---------------------------------------#
+sensor more: !include microaqua/uaqua_sensor.yaml
+switch more: !include microaqua/uaqua_switch.yaml
+automation more: !include microaqua/uaqua_automations.yaml
+shell_command: !include microaqua/uaqua_shell_command.yaml
+input_number: !include microaqua/uaqua_input_number.yaml
+
+
+recorder:
+  purge_keep_days: 90
